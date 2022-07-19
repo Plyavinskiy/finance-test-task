@@ -1,8 +1,11 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import App from "./App";
+import renderWithRedux from "./helpers/test/renderWithRedux";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test("should render app wrapper", () => {
+  const { getByTestId } = renderWithRedux(<App />, {
+    initialState: { tickers: [] },
+  });
+
+  const appWrapper = getByTestId(/app-wrapper/i);
+  expect(appWrapper).toBeInTheDocument();
 });

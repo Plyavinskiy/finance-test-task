@@ -1,0 +1,10 @@
+.header {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.field {
+  width: 200px;
+  margin: 0 20px;
+}
