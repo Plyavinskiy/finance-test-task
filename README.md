@@ -94,3 +94,32 @@ The tickers we use:
 3. Modify content of the folder `server` - if you want to complete bonus tasks
 4. Commit and push your code to your repository
 5. Send us link to your repository
+
+
+## Information regarding implementation details, requirements, and preferred technologies
+=========================================================================================
+1. Highlighted columns with metrics in red and green colors.
+2. Added arrows, +/- and $ for metrics columns.
+3. Added colors for ticker abbreviations, but only existing ones. There were 2 ideas:
+
+1) It was possible to generate colors and assign randomly for new tickers, but I assumed that tickers in reality, most likely, should have fixed colors.
+
+2) It was possible to assign the same colors to all tickers, including new ones, but then the highlighting loses its meaning.
+
+I wanted to remove the colors that I added in order to get away from the hardcode, but there are colors on the site at the link specified in the task, and it’s nicer to debug the UI with them, so I decided to leave them.
+
+4. Provided a modal where you can add new tickers. I did not add a decryption field so as not to edit the server. I didn't bother with flowers either. The button becomes active when text is entered. To exit the modal window, click anywhere on the screen or press Esc.
+
+# All the main listed functionality is also implemented
+-------------------------------------------------------
+1. You can hide tickers with the Hide button and display them with the SHOW HIDDEN TICKERS button located on the ticker table.
+
+2. You can choose the interval from preset values. I decided not to provide the ability to set an arbitrary interval, because It is more convenient for the user to work with preset settings.
+
+3. You can add tickers (via modal) and delete (using the button with a cross provided in each line of the table).
+
+- It was possible to provide charts that are presented on some American exchanges, or provide a separate portfolio for stocks, but to do everything well, you need to dive into the topic of trading, which takes time.
+
+4. From technologies I used React, Redux, Redux-Toolkit, Socket.io, Material UI, React Testing Library.
+
+5. I also set up ESLint and Prettier.
